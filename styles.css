@@ -330,6 +330,12 @@ input[type="checkbox"] {
   justify-content: space-between;
   margin-bottom: 5px;
 }
+.topbar div:hover {
+    background-color: #3e8e41;
+  }
+  .sideMenu li:hover {
+    background-color: #3e8e41;
+  }
 .top-navbar {
   display: flex;
   justify-content: space-around;
