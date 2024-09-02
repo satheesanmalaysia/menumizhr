@@ -341,7 +341,13 @@ input[type="checkbox"] {
   justify-content: space-around;
   margin: 10px;
 }
+.approve-reject-button button:hover {
+    background-color: #3e8e41;
+  }
 
+  .tabs div:hover {
+    background-color: #3e8e41;
+  }
 /* popup */
 
 body-popup {
