@@ -1,241 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HR Dashboard</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="menu-miz">
     <div class="sidebar">
-        <!-- Sidebar Navigation -->
-        <div class="logo">HRHR</div>
-        <ul>
-            <li>Dashboard</li>
-            <li>Calendar</li>
-            <li>Recruitment <span class="badge">10</span></li>
-            <li>Employees</li>
-            <li class="active">Leave</li>
-            <li>Organisation</li>
-            <li>Billings</li>
-            <li>Engagement</li>
-            <li>Development</li>
-            <li>Performance</li>
-            <li>Reports</li>
-        </ul>
+      <!-- Sidebar Navigation -->
+      <div class="logo">HRHR</div>
+      <ul id="sideMenu">
+        <li>Dashboard</li>
+        <li>Calendar</li>
+        <li>Recruitment <span class="badge">10</span></li>
+        <li>Employees</li>
+        <li class="active">Leave</li>
+        <li>Organisation</li>
+        <li>Billings</li>
+        <li>Engagement</li>
+        <li>Development</li>
+        <li>Performance</li>
+        <li>Reports</li>
+      </ul>
     </div>
     <div class="main-content">
-        <header>
-            <div class="header-left">
-                <h1>Leave Management</h1>
-                <nav>
-                    <a href="#">Leave Requests</a>
-                    <a href="#">Leave Types</a>
-                    <a href="#">Leave Calendar</a>
-                    <a href="#">Leave Report</a>
-                </nav>
+      <header>
+        <div class="top-navbar">
+          <div class="header-left">
+            <h1 style="margin: 5px">Leave Management</h1>
+          </div>
+          <div class="header-right">
+            <input type="text" placeholder="Enter any keyword..." />
+            <div class="user-profile">
+              <img
+                style="width: 40px; height: 40px"
+                src="35.50.m.jpg"
+                alt="User Profile"
+              />
+              <span>John Doe</span>
             </div>
-            <div class="header-right">
-                <input type="text" placeholder="Enter any keyword...">
-                <div class="user-profile">
-                    <img src="user-profile.png" alt="User Profile">
-                    <span>John Doe</span>
-                </div>
-            </div>
-        </header>
-        <div class="dashboard">
-            <div class="body-loading">
-                <h2 >Heatmap</h2>
-                
-            <div class="heatmap">
-                
-                <div class="heatmap-stats">
-                    
-                    <div >Sick Leave
-                        <div class="progress-container">
-                            <div class="circle">
-                                <div class="bar right" id="right-bar"></div>
-                                <div class="bar left" id="left-bar"></div>
-                            </div>
-                            <div class="inner-circle" id="progress-value">50%</div>
-                        </div> 
-                    </div>
-                </div>
-                <div class="heatmap-stats">
-                <div>Annual Leave
-                    <div class="progress-container">
-                        <div class="circle">
-                            <div class="bar right" id="right-bar"></div>
-                            <div class="bar left" id="left-bar"></div>
-                        </div>
-                        <div class="inner-circle" id="progress-value">50%</div>
-                    </div> 
-                </div>
-                
-                </div>
-                <div class="heatmap-stats">
-                <div>Emergency Leave
-                    <div class="progress-container">
-                        <div class="circle">
-                            <div class="bar right" id="right-bar"></div>
-                            <div class="bar left" id="left-bar"></div>
-                        </div>
-                        <div class="inner-circle" id="progress-value">50%</div>
-                    </div> 
-                </div>
-                
-                </div>
-                </div>
-            </div>
-            <div>
-                <div  class="leave-requests1">
-                <div><h1>Leave Requests</h1></div>
-                <div class="btn-group">
-                    <button class="button1">List View</button>
-                    <button class="button2">Month View</button>
-                   
-                </div>
-            </div>
-                <div class="tabs">
-                    <div class="tab active">All</div>
-                    <div class="tab">Approved</div>
-                    <div class="tab">Rejected</div>
-                </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>NAME</th>
-                            <th>PERIOD</th>
-                            <th>DAY(S)</th>
-                            <th>LEAVE TYPE
-                                <select>        
-                                    <option value="volvo">Anual Leave</option>
-                                    <option value="saab">Hosptial Leave</option>
-                                    <option value="mercedes">Sick Leave</option>
-                            </select>
-                            </th>
-                            <th>ACTIONS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <img src="https://i.imgur.com/0T7RXYV.png" alt="Mark Jacobs" class="profile-pic"> 
-                                Mark Jacobs
-                            </td>
-                            <td>31 Mar, 2023 09:00 AM <br> 31 Mar, 2023 18:00 PM</td>
-                            <td>1.0</td>
-                            <td>Annual Leave</td>
-                            <td>
-                                <div class="approve-reject-button">
-                                <button class="button-approve" onclick="alert('Approve')">Approve</button>
-                                <button class="button-reject" onclick="alert('Reject')">Reject</button>
-                            </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <img src="https://i.imgur.com/v8b8ZBd.png" alt="Charlie Kristen" class="profile-pic"> 
-                                Charlie Kristen
-                            </td>
-                            <td>10 Apr, 2023 09:00 AM <br> 11 Apr, 2023 18:00 PM</td>
-                            <td>2.0</td>
-                            <td>Annual Leave</td>
-                            <td>
-                                <div class="approve-reject-button">
-                                <button class="button-approve" onclick="alert('Approve')">Approve</button>
-                                <button class="button-reject" onclick="alert('Reject')">Reject</button>
-                            </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>
-                                <img src="https://i.imgur.com/Tgde5Co.png" alt="Nur Fariha binti Maslan" class="profile-pic"> 
-                                Nur Fariha binti Maslan
-                            </td>
-                            <td>21 Apr, 2023 09:00 AM <br> 24 Apr, 2023 18:00 PM</td>
-                            <td>2.0</td>
-                            <td>Hospital Leave
-                                
-                            </td>
-                            <td>
-                                <div class="approve-reject-button">
-                                <button class="button-approve" onclick="alert('Approve')">Approve</button>
-                                <button class="button-reject" onclick="alert('Reject')">Reject</button>
-                            </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          </div>
         </div>
+        <div class="topbar" id="topbar">
+          <div class="item clicked">Leave Requests</div>
+          <div class="item">Leave Types</div>
+          <div class="item">Leave Calendar</div>
+          <div class="item">Leave Report</div>
+        </div>
+      </header>
+      <div class="dashboard">
+        <div class="body-loading">
+          <h2>Heatmap</h2>
+
+          <div class="heatmap">
+            <div class="heatmap-stats">
+              <div>
+                Sick Leave
+                <div class="progress-container">
+                  <div class="circle">
+                    <div class="bar right" id="right-bar"></div>
+                    <div class="bar left" id="left-bar"></div>
+                  </div>
+                  <div class="inner-circle" id="progress-value">50%</div>
+                </div>
+              </div>
+            </div>
+            <div class="heatmap-stats">
+              <div>
+                Annual Leave
+                <div class="progress-container">
+                  <div class="circle">
+                    <div class="bar right" id="right-bar"></div>
+                    <div class="bar left" id="left-bar"></div>
+                  </div>
+                  <div class="inner-circle" id="progress-value">50%</div>
+                </div>
+              </div>
+            </div>
+            <div class="heatmap-stats">
+              <div>
+                Emergency Leave
+                <div class="progress-container">
+                  <div class="circle">
+                    <div class="bar right" id="right-bar"></div>
+                    <div class="bar left" id="left-bar"></div>
+                  </div>
+                  <div class="inner-circle" id="progress-value">50%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="leave-requests1">
+            <div><h1>Leave Requests</h1></div>
+            <div class="btn-group">
+              <button class="button1" id="listButton">List View</button>
+              <button class="button2" id="monthButton">Month View</button>
+            </div>
+          </div>
+          <div class="tabs">
+            <div class="tab active">All</div>
+            <div class="tab">Approved</div>
+            <div class="tab">Rejected</div>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>NAME</th>
+                <th>PERIOD</th>
+                <th>DAY(S)</th>
+                <th>
+                  LEAVE TYPE
+                  <select>
+                    <option value="volvo">Anual Leave</option>
+                    <option value="saab">Hosptial Leave</option>
+                    <option value="mercedes">Sick Leave</option>
+                  </select>
+                </th>
+                <th>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <img
+                    src="https://i.imgur.com/0T7RXYV.png"
+                    alt="Mark Jacobs"
+                    class="profile-pic"
+                  />
+                  Mark Jacobs
+                </td>
+                <td>
+                  31 Mar, 2023 09:00 AM <br />
+                  31 Mar, 2023 18:00 PM
+                </td>
+                <td>1.0</td>
+                <td>Annual Leave</td>
+                <td>
+                  <div class="approve-reject-button">
+                    <button
+                      class="button-approve"
+                      onclick="showPopup('Approve','Mark Jacobs')"
+                    >
+                      Approve
+                    </button>
+                    <button
+                      class="button-reject"
+                      onclick="showPopup('Reject','Mark Jacobs')"
+                    >
+                      Reject
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <img
+                    src="https://i.imgur.com/v8b8ZBd.png"
+                    alt="Charlie Kristen"
+                    class="profile-pic"
+                  />
+                  Charlie Kristen
+                </td>
+                <td>
+                  10 Apr, 2023 09:00 AM <br />
+                  11 Apr, 2023 18:00 PM
+                </td>
+                <td>2.0</td>
+                <td>Annual Leave</td>
+                <td>
+                  <div class="approve-reject-button">
+                    <button
+                      class="button-approve"
+                      onclick="showPopup('Approve','Charlie Kristen')"
+                    >
+                      Approve
+                    </button>
+                    <button
+                      class="button-reject"
+                      onclick="showPopup('Reject','Charlie Kristen')"
+                    >
+                      Reject
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>
+                  <img
+                    src="https://i.imgur.com/Tgde5Co.png"
+                    alt="Nur Fariha binti Maslan"
+                    class="profile-pic"
+                  />
+                  Nur Fariha binti Maslan
+                </td>
+                <td>
+                  21 Apr, 2023 09:00 AM <br />
+                  24 Apr, 2023 18:00 PM
+                </td>
+                <td>2.0</td>
+                <td>Hospital Leave</td>
+                <td>
+                  <div class="approve-reject-button">
+                    <button
+                      class="button-approve"
+                      onclick="showPopup('Approve','Charlie Kristen')"
+                    >
+                      Approve
+                    </button>
+                    <button
+                      class="button-reject"
+                      onclick="showPopup('Reject','Charlie Kristen')"
+                    >
+                      Reject
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
     <div class="notifications">
-        <h2>Notifications</h2>
-        <ul>
-            <li>
-                <img  class="profile-pic-notification" src="35.50.m.jpg" alt="Avatar">
-                <span>Mark Jacobs has applied for leave...</span>
-                <span>Today at 09:42 AM</span>
-            </li>
-            <li>
-                <img  class="profile-pic-notification" src="35.50.m.jpg" alt="Avatar">
-                <span>Sat has applied for leave...</span>
-                <span>Today at 09:42 AM</span>
-            </li>
-            <li>
-                <img  class="profile-pic-notification" src="35.50.m.jpg" alt="Avatar">
-                <span>Mat has applied for leave...</span>
-                <span>Today at 09:42 AM</span>
-            </li>
-            <li>
-                <img  class="profile-pic-notification" src="35.50.m.jpg" alt="Avatar">
-                <span>Unni has applied for leave...</span>
-                <span>Today at 09:42 AM</span>
-            </li>
-            <li>
-                <img  class="profile-pic-notification" src="35.50.m.jpg" alt="Avatar">
-                <span>Jacob has applied for leave...</span>
-                <span>Today at 09:42 AM</span>
-            </li>
-            <!-- More notifications -->
-        </ul>
+      <h2>Notifications</h2>
+      <ul>
+        <li>
+          <img
+            class="profile-pic-notification"
+            src="35.50.m.jpg"
+            alt="Avatar"
+          />
+          <span>Mark Jacobs has applied for leave...</span>
+          <span>Today at 09:42 AM</span>
+        </li>
+        <li>
+          <img
+            class="profile-pic-notification"
+            src="35.50.m.jpg"
+            alt="Avatar"
+          />
+          <span>Sat has applied for leave...</span>
+          <span>Today at 09:42 AM</span>
+        </li>
+        <li>
+          <img
+            class="profile-pic-notification"
+            src="35.50.m.jpg"
+            alt="Avatar"
+          />
+          <span>Mat has applied for leave...</span>
+          <span>Today at 09:42 AM</span>
+        </li>
+        <li>
+          <img
+            class="profile-pic-notification"
+            src="35.50.m.jpg"
+            alt="Avatar"
+          />
+          <span>Unni has applied for leave...</span>
+          <span>Today at 09:42 AM</span>
+        </li>
+        <li>
+          <img
+            class="profile-pic-notification"
+            src="35.50.m.jpg"
+            alt="Avatar"
+          />
+          <span>Jacob has applied for leave...</span>
+          <span>Today at 09:42 AM</span>
+        </li>
+        <!-- More notifications -->
+      </ul>
+    </div>
+    <div class="body-popup">
+      <div class="popup" id="popup">
+        <h2>Confirmation</h2>
+        <p>
+          Are you sure you want to <span id="output"></span>
+          <span id="name"></span>'s sick leave for 1 day?
+        </p>
+        <button class="no" onclick="hidePopup()">NO</button>
+        <button class="yes" onclick="confirmAction()">YES</button>
+      </div>
     </div>
 
-
     <script>
-        function updateProgress(percent) {
-            const rightBar = document.getElementById('right-bar');
-            const leftBar = document.getElementById('left-bar');
-            const progressValue = document.getElementById('progress-value');
+      function updateProgress(percent) {
+        const rightBar = document.getElementById("right-bar");
+        const leftBar = document.getElementById("left-bar");
+        const progressValue = document.getElementById("progress-value");
 
-            let angle = percent * 3.6;
+        let angle = percent * 3.6;
 
-            if (percent <= 50) {
-                rightBar.style.transform = `rotate(${angle}deg)`;
-                leftBar.style.transform = 'rotate(180deg)';
-            } else {
-                rightBar.style.transform = 'rotate(180deg)';
-                leftBar.style.transform = `rotate(${angle - 180}deg)`;
-            }
-
-            progressValue.textContent = `50%`;
+        if (percent <= 50) {
+          rightBar.style.transform = `rotate(${angle}deg)`;
+          leftBar.style.transform = "rotate(180deg)";
+        } else {
+          rightBar.style.transform = "rotate(180deg)";
+          leftBar.style.transform = `rotate(${angle - 180}deg)`;
         }
 
-        // Example usage
-        let progress = 0;
-        const interval = setInterval(() => {
-            if (progress >= 100) {
-                clearInterval(interval);
-            } else {
-                progress++;
-                updateProgress(progress);
-            }
-        }, 50);
+        progressValue.textContent = `50%`;
+      }
+
+      // Example usage
+      let progress = 0;
+      const interval = setInterval(() => {
+        if (progress >= 100) {
+          clearInterval(interval);
+        } else {
+          progress++;
+          updateProgress(progress);
+        }
+      }, 50);
+
+      function showPopup(status, name) {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("output").innerHTML = status;
+        document.getElementById("name").innerHTML = name;
+      }
+
+      function hidePopup() {
+        document.getElementById("popup").style.display = "none";
+      }
+
+      function confirmAction() {
+        console.log("Confirm Action");
+        hidePopup();
+      }
+
+      const listItems = document.querySelectorAll("#sideMenu li");
+
+      // Add click event listener to each <li> element
+      listItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          alert(`You clicked on ${item.textContent}`);
+        });
+      });
+
+      const divItems = document.querySelectorAll("#topbar .item");
+
+      divItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          // Remove 'clicked' class from all items
+          divItems.forEach((i) => i.classList.remove("clicked"));
+          // Add 'clicked' class to the clicked item
+          item.classList.add("clicked");
+          alert(`You clicked on ${item.textContent}`);
+        });
+      });
+
+      function monthView(e) {}
+      const monthbutton = document.getElementById("monthButton");
+      const listbutton = document.getElementById("listButton");
+
+      // Add click event listener to the button
+      monthbutton.addEventListener("click", () => {
+        monthbutton.classList.remove("button2");
+        monthbutton.classList.add("button1");
+        listbutton.classList.add("button2");
+        alert("Month View clicked!");
+      });
+      listbutton.addEventListener("click", () => {
+        listbutton.classList.remove("button2");
+        listbutton.classList.add("button1");
+        monthbutton.classList.add("button2");
+        alert("List View clicked!");
+      });
     </script>
-</body>
+  </body>
 </html>
